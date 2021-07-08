@@ -1,20 +1,15 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if (x < 0) {
-            return false;
-        } else {
-            long int y(0), z(x);
-            while (z > 0) {
-                y *= 10;
-                y += z % 10;
-                z /= 10;
+        string y(to_string(x));
+        int l(0), r(y.length() - 1);
+        while (l < r) {
+            if (y[l] != y[r]) {
+                return false;
             }
-            if (x == y) {
-                return true;
-            } else {
-                return false;  
-            }
+            ++l;
+            --r;
         }
+        return true;
     }
 };
