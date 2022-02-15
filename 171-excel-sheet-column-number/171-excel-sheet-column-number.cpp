@@ -1,11 +1,11 @@
 class Solution {
 public:
     int titleToNumber(string columnTitle) {
-        int answer = 0;
+        int number = 0;
         for (char &letter: columnTitle) {
-            answer *= 26;
-            answer += letter - 'A' + 1;
+            number *= 26;
+            number += letter - 'A' + 1;
         }
-        return answer;
+        return number;
     }
 };
