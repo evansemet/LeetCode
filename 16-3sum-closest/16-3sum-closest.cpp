@@ -8,9 +8,7 @@ public:
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (sum == target) return target;
-                if (abs(target - sum) < abs(diff)) {
-                    diff = target - sum;
-                }
+                if (abs(target - sum) < abs(diff)) diff = target - sum;
                 if (sum < target) ++left;
                 else --right;
             }
