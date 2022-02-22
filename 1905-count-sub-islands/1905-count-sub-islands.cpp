@@ -15,7 +15,7 @@ public:
     
     
     bool dfs(vector<vector<int>>& grid1, vector<vector<int>>& grid2, int i, int j, vector<vector<int>>& visited) {
-        if (i < 0 || j < 0 || i == grid1.size() ||j == grid1[0].size() || 
+        if (i < 0 || j < 0 || i == grid1.size() || j == grid1[0].size() || 
            !grid2[i][j] || visited[i][j]) {
             return true;
         }
