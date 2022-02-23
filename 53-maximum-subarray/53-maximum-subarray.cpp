@@ -1,10 +1,10 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int currSub = nums[0], maxSub = currSub;
+        int curr = nums[0], maxSub = curr;
         for (int i = 1; i < nums.size(); ++i) {
-            currSub = max(nums[i], currSub + nums[i]);
-            maxSub = max(maxSub, currSub);
+            curr = max(nums[i], curr + nums[i]);
+            maxSub = max(curr, maxSub);
         }
         return maxSub;
     }
