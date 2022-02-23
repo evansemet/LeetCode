@@ -19,7 +19,7 @@ public:
             return true;
         }
         visited[i][j] = 1;
-        bool result = grid1[i][j] ? true : false;
+        bool result = grid1[i][j];
         result *= dfs(grid1, grid2, i + 1, j, visited);
         result *= dfs(grid1, grid2, i - 1, j, visited);
         result *= dfs(grid1, grid2, i, j + 1, visited);
