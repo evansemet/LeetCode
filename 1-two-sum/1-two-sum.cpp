@@ -4,10 +4,8 @@ public:
         unordered_map<int, int> check;
         for (int i = 0; i < nums.size(); ++i) {
             int look = target - nums[i];
-            for (auto &thing : check) {
-                if (thing.first == look) {
-                    return {thing.second, i};
-                }
+            if (check.count(look)) {
+                return {check[look], i};
             }
             check[nums[i]] = i;
         }
