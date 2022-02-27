@@ -4,9 +4,9 @@ public:
         if (!mat.size() || r * c != mat.size() * mat[0].size()) return mat;
         vector<vector<int>> res(r, vector<int>(c));
         int row = 0, col = 0;
-        for (int i = 0; i < mat.size(); ++i) {
-            for (int j = 0; j < mat[i].size(); ++j) {
-                res[row][col++] = mat[i][j];
+        for (vector<int> matR : mat) {
+            for (int num : matR) {
+                res[row][col++] = num;
                 if (col == c) {
                     ++row;
                     col = 0;
