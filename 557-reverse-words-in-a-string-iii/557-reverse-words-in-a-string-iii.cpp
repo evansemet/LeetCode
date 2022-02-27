@@ -4,8 +4,7 @@ public:
         for (int i = 0; i < s.size();) {
             for (int j = i + 1; j <= s.size(); ++j) {
                 if (s[j] == ' ' || j == s.size()) {
-                    int l = i, r = j - 1;
-                    while (l < r) swap(s[l++], s[r--]);
+                    for (int l = i, r = j - 1; l < r;) swap(s[l++], s[r--]);
                     i = j + 1;
                 }
             }
