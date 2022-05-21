@@ -8,9 +8,7 @@ class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return
-        
         res = []
-        
         def helper(node):
             if not node.left and not node.right:
                 res.append(node.val)
@@ -20,6 +18,5 @@ class Solution:
                 helper(node.left)
             if node.right:
                 helper(node.right)
-                
         helper(root)
         return res
