@@ -12,5 +12,3 @@ class Solution:
             res.append([student, avg])
             
         return sorted(res)
-    
-    
