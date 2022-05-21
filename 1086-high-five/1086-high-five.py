@@ -3,12 +3,14 @@ class Solution:
         res = []
         obj = defaultdict(list)
         
-        for stud, score in items:
-            heappush(obj[stud], score)
-            if len(obj[stud]) > 5:
-                heappop(obj[stud])
-        for stud, score in obj.items():
-            avg = sum(score) // 5
-            res.append([stud, avg])
+        for student, scores in items:
+            heappush(obj[student], scores)
+            if len(obj[student]) > 5:
+                heappop(obj[student])
+        for student, scores in obj.items():
+            avg = sum(scores) // 5
+            res.append([student, avg])
             
         return sorted(res)
+    
+    
