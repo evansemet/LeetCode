@@ -8,7 +8,7 @@ class Solution:
                 x, y = x + dX, y + dY
             elif d == "L":
                 dX, dY = -dY, dX
-            else:
+            elif d == "R":
                 dX, dY = dY, -dX
                 
         return (x, y) == (0, 0) or (dX, dY) != (0, 1)
