@@ -8,4 +8,3 @@ class Solution:
             if val == 0:
                 return idx + 1
         return 1
-        
