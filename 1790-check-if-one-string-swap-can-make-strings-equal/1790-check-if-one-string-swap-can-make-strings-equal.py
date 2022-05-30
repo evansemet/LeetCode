@@ -4,4 +4,6 @@ class Solution:
         for i in range(len(s1)):
             if s1[i] != s2[i]:
                 count += 1
+            if count > 2:
+                return False
         return (count == 2 or count == 0) and sorted(s1) == sorted(s2)
