@@ -6,9 +6,7 @@ class Solution:
             lg = max(lg, num)
         
         def gcd(a, b):
-            if a == 0: return b
-            elif b == 0 or a == b: return a
-            elif a > b: return gcd(a - b, b)
-            else: return gcd(a, b - a)
+            if b == 0: return a
+            else: return gcd(b, a % b)
             
         return gcd(sm, lg)
